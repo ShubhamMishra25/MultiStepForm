@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-Step Form with Next.js
 
-## Getting Started
+## Overview
+This project is a modular, user-friendly multi-step form built using Next.js, React Hook Form, and Zod for validation. The form includes step progress indicators, inline validation, and a clean UI/UX.
 
-First, run the development server:
+## Features
+- **Multi-Step Navigation**: Navigate between steps with "Next" and "Back" buttons.
+- **Validation**: Inline validation using Zod, triggered only on "Next".
+- **Error Messages**: Inline error messages displayed next to form fields.
+- **Password Visibility Toggle**: Show/hide password functionality with eye icons.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Technologies Used
+- **Next.js**: Framework for building React applications.
+- **React Hook Form**: Library for managing form state and validation.
+- **Zod**: Schema-based validation library.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+
+## Project Structure
+```
+public/
+  eye.svg
+  file.svg
+  globe.svg
+  next.svg
+  vercel.svg
+  window.svg
+src/
+  app/
+    favicon.ico
+    globals.css
+    layout.tsx
+    page.tsx
+    _components/
+      multi-step-form.tsx
+      step-progress.tsx
+    hooks/
+      Use-multi-step-view-model.tsx
+  components/
+    ui/
+      button.tsx
+      calendar.tsx
+      card.tsx
+      form.tsx
+      input.tsx
+      label.tsx
+      popover.tsx
+      select.tsx
+  lib/
+    utils.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd multistep-form-next
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running the Project
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+2. Open your browser and navigate to `http://localhost:3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
+1. Fill out the form step by step.
+2. Navigate between steps using "Next" and "Back" buttons.
+3. Submit the form on the final step.
 
-## Learn More
+## Customization
+- **Validation Schema**: Modify `createUserSchema` in `src/app/hooks/Use-multi-step-view-model.tsx` to update validation rules.
+- **UI Components**: Customize components in `src/components/ui/`.
+- **Styling**: Update styles in `globals.css` or use Tailwind CSS classes.
 
-To learn more about Next.js, take a look at the following resources:
+## License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+For questions or feedback, please contact [your-email@example.com].
